@@ -57,7 +57,11 @@
     {
       "size" : "1024x1024",
       "idiom" : "watch-marketing",
+<<<<<<< HEAD
       "filename" : "loopicon1024.png",
+=======
+      "filename" : "Icon-App-Store-1024.png",
+>>>>>>> LoopKit/dev
       "scale" : "1x"
     }
   ],
