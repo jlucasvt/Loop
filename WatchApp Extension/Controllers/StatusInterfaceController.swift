@@ -17,7 +17,8 @@ final class StatusInterfaceController: WKInterfaceController, ContextUpdatable {
     @IBOutlet weak var glucoseLabel: WKInterfaceLabel!
     @IBOutlet weak var eventualGlucoseLabel: WKInterfaceLabel!
     @IBOutlet weak var statusLabel: WKInterfaceLabel!
-
+    @IBOutlet var modeDisableButton: WKInterfaceButton!
+    
     private var lastContext: WatchContext?
 
     override func didAppear() {
@@ -91,8 +92,18 @@ final class StatusInterfaceController: WKInterfaceController, ContextUpdatable {
             eventualGlucoseLabel.setHidden(true)
         }
         
+        // TODO:
+        // Get context of a target mode enabled (workoutmode or eatingsoon)
+    
+        // If workoutmode set button color
+        // If workoutmode set button hightlight
+        
+        // If eatingsoon set button highlight
+        // If eatingsoon set button visible
+        
         // TODO: Other elements
         statusLabel.setHidden(true)
+        
     }
 
     // MARK: - Menu Items
@@ -103,6 +114,10 @@ final class StatusInterfaceController: WKInterfaceController, ContextUpdatable {
 
     @IBAction func setBolus() {
         presentController(withName: BolusInterfaceController.className, context: lastContext?.bolusSuggestion)
+    }
+    
+    @IBAction func setWorkoutMode() {
+        presentController(withName: WorkoutInterfaceController.className, context: nil)
     }
 
 }

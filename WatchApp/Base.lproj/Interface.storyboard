@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rNf-Mh-tID">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rNf-Mh-tID">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--AddCarbsInterfaceController-->
@@ -117,7 +117,39 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="520" y="345"/>
+            <point key="canvasLocation" x="841" y="345"/>
+        </scene>
+        <!--WorkoutInterfaceController-->
+        <scene sceneID="qhx-uY-CNf">
+            <objects>
+                <controller identifier="WorkoutInterfaceController" hidesWhenLoading="NO" id="wQy-wy-tmi" customClass="WorkoutInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="YIR-Ai-2Yc">
+                            <items>
+                                <button width="1" alignment="left" title="1 Hour" id="qS7-Fp-R8U">
+                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="oneHourButton" destination="wQy-wy-tmi" id="LAd-Mz-0ga"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" verticalAlignment="center" title="2 Hours" id="vu9-YB-ynS">
+                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="twoHourButton" destination="wQy-wy-tmi" id="0h3-wy-Wk0"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Indefinite" id="INR-hB-gBo">
+                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="indefiniteButton" destination="wQy-wy-tmi" id="Ewg-Rx-1tt"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="547" y="615"/>
         </scene>
         <!--Loop-->
         <scene sceneID="gQv-2Z-iCt">
@@ -156,52 +188,6 @@
                                 </group>
                             </items>
                         </group>
-                        <group width="1" height="0.59999999999999998" alignment="center" verticalAlignment="bottom" id="VU2-MR-CSd">
-                            <items>
-                                <group width="0.5" alignment="left" layout="vertical" id="wJu-fl-xhv">
-                                    <items>
-                                        <button alignment="center" id="5iF-jW-tC8">
-                                            <group key="contentGroup" width="54" height="54" alignment="left" radius="27" id="C7f-Mo-eUU">
-                                                <items>
-                                                    <imageView alignment="center" verticalAlignment="center" image="fork" contentMode="center" id="4aO-ao-Sp9">
-                                                        <color key="tintColor" red="0.38823529410000002" green="0.85490196080000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
-                                                </items>
-                                                <color key="backgroundColor" red="0.38823529410000002" green="0.85490196080000003" blue="0.21960784310000001" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <variation key="device=watch42mm" height="60" radius="30" width="60"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="addCarbs" destination="rNf-Mh-tID" id="Hpn-qU-IW9"/>
-                                            </connections>
-                                        </button>
-                                        <label alignment="center" text="Carbs" id="hln-CI-MRP">
-                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                        </label>
-                                    </items>
-                                </group>
-                                <group width="0.5" alignment="left" layout="vertical" id="rGH-c2-O6g">
-                                    <items>
-                                        <button alignment="center" id="jea-z6-U9e">
-                                            <group key="contentGroup" width="54" height="54" alignment="left" radius="27" id="RpD-Vg-Uef">
-                                                <items>
-                                                    <imageView alignment="center" verticalAlignment="center" image="bolus" contentMode="center" id="RKB-f5-XWX">
-                                                        <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
-                                                </items>
-                                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <variation key="device=watch42mm" height="60" radius="30" width="60"/>
-                                            </group>
-                                            <connections>
-                                                <action selector="setBolus" destination="rNf-Mh-tID" id="Zvf-la-3Mc"/>
-                                            </connections>
-                                        </button>
-                                        <label alignment="center" text="Bolus" id="smL-Rc-IZh">
-                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                        </label>
-                                    </items>
-                                </group>
-                            </items>
-                        </group>
                     </items>
                     <connections>
                         <outlet property="eventualGlucoseLabel" destination="0zU-nK-BWD" id="0V7-RE-Lnr"/>
@@ -209,6 +195,7 @@
                         <outlet property="loopHUDImage" destination="Q7C-xN-eH8" id="CIe-B3-umI"/>
                         <outlet property="loopTimer" destination="sG9-yO-4Xy" id="tfl-hp-Eu5"/>
                         <outlet property="statusLabel" destination="PI8-dB-Ykw" id="T85-wv-NB2"/>
+                        <segue destination="3oc-Vr-Gba" kind="relationship" relationship="nextPage" id="ks4-mx-4LE"/>
                     </connections>
                 </controller>
             </objects>
@@ -277,7 +264,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="791" y="347"/>
+            <point key="canvasLocation" x="1112" y="347"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -305,6 +292,105 @@
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Loop-->
+        <scene sceneID="ZO6-E6-WCZ">
+            <objects>
+                <controller title="Loop" id="3oc-Vr-Gba" customClass="StatusInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <group width="1" height="81" alignment="center" id="UWI-QW-p9U">
+                            <items>
+                                <group width="0.5" alignment="left" layout="vertical" id="0XC-Ct-xNb">
+                                    <items>
+                                        <button alignment="center" id="Q34-5I-iMo">
+                                            <group key="contentGroup" width="54" height="54" alignment="left" radius="27" id="j6Z-Zx-mPb">
+                                                <items>
+                                                    <imageView alignment="center" verticalAlignment="center" image="fork" contentMode="center" id="C0I-I2-Qc7">
+                                                        <color key="tintColor" red="0.38823529410000002" green="0.85490196080000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </imageView>
+                                                </items>
+                                                <color key="backgroundColor" red="0.38823529410000002" green="0.85490196080000003" blue="0.21960784310000001" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <variation key="device=watch42mm" height="60" radius="30" width="60"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="addCarbs" destination="3oc-Vr-Gba" id="rbz-al-XOU"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" text="Carbs" id="AdW-P7-B2j">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="0.5" alignment="left" layout="vertical" id="TrV-up-pKD">
+                                    <items>
+                                        <button alignment="center" id="krx-Gn-Opr">
+                                            <group key="contentGroup" width="54" height="54" alignment="left" radius="27" id="mGc-sh-xiE">
+                                                <items>
+                                                    <imageView alignment="center" verticalAlignment="center" image="bolus" contentMode="center" id="kHs-Xs-jsV">
+                                                        <color key="tintColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </imageView>
+                                                </items>
+                                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <variation key="device=watch42mm" height="60" radius="30" width="60"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="setBolus" destination="3oc-Vr-Gba" id="skP-w5-t1V"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" text="Bolus" id="vfU-A5-5d2">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="83" alignment="center" verticalAlignment="bottom" id="h80-yG-jWN">
+                            <items>
+                                <group width="0.5" alignment="left" layout="vertical" id="tKM-5T-by1">
+                                    <items>
+                                        <button alignment="center" id="vg1-bj-S1p">
+                                            <group key="contentGroup" width="54" height="54" alignment="left" radius="27" id="6Ub-ZC-bkD">
+                                                <items>
+                                                    <imageView alignment="center" verticalAlignment="center" image="eatingsoon" contentMode="center" id="u3s-zA-K2c">
+                                                        <color key="tintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </imageView>
+                                                </items>
+                                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <variation key="device=watch42mm" height="60" radius="30" width="60"/>
+                                            </group>
+                                        </button>
+                                        <label height="16" alignment="center" text="Eat Soon" id="DxO-Ya-V4H">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="0.5" alignment="left" layout="vertical" id="ZV4-yg-27o">
+                                    <items>
+                                        <button alignment="center" id="axg-k2-jdo">
+                                            <group key="contentGroup" width="54" height="54" alignment="left" radius="27" id="9uJ-TH-Gmk">
+                                                <items>
+                                                    <imageView alignment="center" verticalAlignment="center" image="workout" contentMode="top" id="RuD-B1-Whn">
+                                                        <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </imageView>
+                                                </items>
+                                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <variation key="device=watch42mm" height="60" radius="30" width="60"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="setWorkoutMode" destination="3oc-Vr-Gba" id="kE7-P4-CGa"/>
+                                            </connections>
+                                        </button>
+                                        <label height="16" alignment="center" text="Workout" id="RQF-dA-zia">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="546.61538461538464" y="344.79487179487182"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
